@@ -28,6 +28,11 @@ a {
     color: inherit;
 }
 
+h6 {
+    font-family: 'Montserrat', serif;
+    font-size : 12px;
+}
+
 /*Espace Header Accueil */
 .accueil-header {
     margin-top: 75px;
