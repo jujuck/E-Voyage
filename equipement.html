@@ -6,6 +6,7 @@
         
         <!--Feuille de style-->
         <link href="css/main.css" rel="stylesheet">
+        <link href="css/equipement.css" rel="stylesheet">
         <link href="css/grid.css" rel="stylesheet">
         
         <!--Font Family-->
@@ -30,7 +31,90 @@
             </div>
         </header>
         <section class="accueil-wrapper">
-           
+            <div class="container">
+                <div class="col-8 equip-menu">
+                    <h2 class="equip-menuItem active" id="">Paysage</h2>
+                    <h2 class="equip-menuItem" id="">Transport</h2>
+                    <h2 class="equip-menuItem" id="">Gastronomie</h2>
+                    <h2 class="equip-menuItem" id="">Culture</h2>
+                    <h2 class="equip-menuItem" id="">Activités</h2>
+                </div>
+            </div>
+            <div class="equip-content">
+                <div class="container">
+                    <div class="col-8">
+                        <p class="equip-text">Choississez votre pourcentage (de 0 à 100%) en fonction de vos préférences et de vos envies</p>
+                    </div>
+                </div>
+                <div class="equip-item">
+                    <div class="container">
+                        <div class="col-2">
+                            <img src="img/forest.jpg" class="equipe-img">
+                        </div>
+                        <div class="col-2">
+                            <img src="img/montagne.jpg" class="equipe-img">
+                        </div>
+                        <div class="col-2">
+                            <img src="img/ocean.jpg" class="equipe-img">
+                        </div>
+                        <div class="col-2">
+                            <img src="img/ville.jpg" class="equipe-img">
+                        </div>
+                    </div>
+                </div>
+                <div class="equip-barre-selection">
+                    <div class="container">
+                        <div class="col-2 equip-selector">
+                            <input onchange="miseAJourForet()" type="text" value="25" class="equip-input" id="foret">
+                        </div>
+                        <div class="col-2 equip-selector">
+                            <input onchange="miseAJourMontagne()" type="text" value="25" class="equip-input" id="montagne">
+                        </div>
+                        <div class="col-2 equip-selector">
+                            <input onchange="miseAJourMer()" type="text" value="25" class="equip-input" id="mer">
+                        </div>
+                        <div class="col-2 equip-selector">
+                            <input onchange="miseAJourVille()" type="text" value="25" class="equip-input" id="ville">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="equip-item">
+                <div class="container ">
+                    <div class="col-8 hidden">
+                        <h5>Transport</h5>
+                    </div>
+                </div>
+                <div class="equip-item">
+                </div>
+            </div>
+            <div class="equip-content">
+                <div class="container ">
+                    <div class="col-8 hidden">
+                        <h5>Gastronomie</h5>
+                    </div>
+                </div>
+                <div class="equip-item">
+                </div>
+            </div>
+            <div class="equip-content">
+                <div class="container ">
+                    <div class="col-8 hidden">
+                        <h5>Culture</h5>
+                    </div>
+                </div>
+                <div class="equip-item">
+                </div>
+            </div>
+            <div class="equip-content">
+                <div class="container ">
+                    <div class="col-8 hidden">
+                        <h5>Activités</h5>
+                    </div>
+                </div>
+                <div class="equip-item">
+                </div>
+            </div>
         </section>
         <footer>
             <div class ="container">
@@ -38,12 +122,14 @@
                   
                 </div>
                 <div class="col-5 accueil-footer-text">
-                    <h4 class="accueil-footer-p btn2">Facebook</h4>
-                    <h4 class="accueil-footer-p btn2">Instagramm</h4>
-                    <h4 class="accueil-footer-p btn2">E Mail</h4>
-                    <h4 class="accueil-footer-p btn2">Created by J.R</h4>
+                    <h4 class="accueil-footer-p btn4">Facebook</h4>
+                    <h4 class="accueil-footer-p btn4">Instagramm</h4>
+                    <h4 class="accueil-footer-p btn4">E Mail</h4>
+                    <h4 class="accueil-footer-p btn4">Created by J.R</h4>
                 </div>
             </div>
+            <h6>Photo by Sagar Patil & Loic Espinasse & mauro paillex & Jose Llamas  & Jose Llamas on Unsplash</h6>
         </footer>
+        <script src="js/paysage.js"></script>
     </body>
 </html>

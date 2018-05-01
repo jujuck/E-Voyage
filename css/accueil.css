@@ -1,0 +1,14 @@
+/*Espace Accueil-wrapper*/
+.accueil-wrapper {
+    width: 100%;
+}
+
+.accueil-image {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+img {
+    width: 80%;
+}
