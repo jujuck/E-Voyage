@@ -33,11 +33,11 @@
         <section class="accueil-wrapper">
             <div class="container">
                 <div class="col-8 equip-menu">
-                    <h2 class="equip-menuItem active" id="">Paysage</h2>
-                    <h2 class="equip-menuItem" id="">Transport</h2>
-                    <h2 class="equip-menuItem" id="">Gastronomie</h2>
-                    <h2 class="equip-menuItem" id="">Culture</h2>
-                    <h2 class="equip-menuItem" id="">Activités</h2>
+                    <h2 class="equip-menuItem active" onclick="onglet(Paysage, PaysageItem)" id="Paysage">Paysage</h2>
+                    <h2 class="equip-menuItem" id="Transport" onclick="onglet(Transport, TransportItem)">Transport</h2>
+                    <h2 class="equip-menuItem" id="Gastronomie" onclick="onglet(Gastronomie, GastronomieItem)">Gastronomie</h2>
+                    <h2 class="equip-menuItem" id="Culture" onclick="onglet(Culture, CultureItem)">Culture</h2>
+                    <h2 class="equip-menuItem" id="Activites" onclick="onglet(Activites, ActivitesItem)">Activités</h2>
                 </div>
             </div>
             <div class="equip-content" id="PaysageItem">
@@ -260,6 +260,7 @@
             </div>
             <h6>Photo by Sagar Patil & Loic Espinasse & mauro paillex & Jose Llamas  & Jose Llamas on Unsplash</h6>
         </footer>
+        <script src="js/onglets.js"></script>
         <script src="js/paysage.js"></script>
     </body>
 </html>
