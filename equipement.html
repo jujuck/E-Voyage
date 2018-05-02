@@ -13,6 +13,9 @@
         <link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet"> <!-- Titre -->
         <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> <!-- Paragraphe -->
         <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet"> <!-- Autres -->
+        
+        <!--Création PDF -->
+        <script src='https://unpkg.com/jspdf@latest/dist/jspdf.min.js'></script>
 
     </head>
     <body>
@@ -41,206 +44,166 @@
                 </div>
             </div>
             <div class="equip-content" id="PaysageItem">
-                <div class="equip-titre2">
-                    <div class="container">
-                        <div class="col-8">
-                            <p class="equip-text">Choississez votre pourcentage (de 0 à 100%) en fonction de vos préférences et de vos envies</p>
-                        </div>
-                    </div>
-                </div>
                 <div class="equip-item">
                     <div class="container">
                         <div class="col-2 equip-img-vert">
+                            <h6>La foret</h6>
                             <img src="img/forest.jpg" class="equip-img height3" id="imgForet">
+                            <input onchange="miseAJourForet()" type="text" value="25" class="equip-input black" id="foret">
                         </div>
                         <div class="col-2 equip-img-vert">
+                            <h6>La montagne</h6>
                             <img src="img/montagne.jpg" class="equip-img height3" id="imgMontagne">
+                            <input onchange="miseAJourMontagne()" type="text" value="25" class="equip-input black" id="montagne">
                         </div>
                         <div class="col-2 equip-img-vert">
+                            <h6>La mer</h6>
                             <img src="img/ocean.jpg" class="equip-img height3" id="imgMer">
+                            <input onchange="miseAJourMer()" type="text" value="25" class="equip-input black" id="mer">
                         </div>
                         <div class="col-2 equip-img-vert">
+                            <h6>La ville</h6>
                             <img src="img/ville.jpg" class="equip-img height3" id="imgVille">
+                            <input onchange="miseAJourVille()" type="text" value="25" class="equip-input black" id="ville">
                         </div>
                     </div>
                 </div>
-                <div class="equip-barre-selection">
+                <div class="equip-titre2">
                     <div class="container">
-                        <div class="col-2 equip-selector">
-                            <input onchange="miseAJourForet()" type="text" value="25" class="equip-input black" id="foret">
-                        </div>
-                        <div class="col-2 equip-selector">
-                            <input onchange="miseAJourMontagne()" type="text" value="25" class="equip-input black" id="montagne">
-                        </div>
-                        <div class="col-2 equip-selector">
-                            <input onchange="miseAJourMer()" type="text" value="25" class="equip-input black" id="mer">
-                        </div>
-                        <div class="col-2 equip-selector">
-                            <input onchange="miseAJourVille()" type="text" value="25" class="equip-input black" id="ville">
+                        <div class="col-8">
+                            <p class="equip-text">Quel lieu de vacances privilégiez vous? A vous de choisir et de réglez vos préférences de 0 à 100.</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="equip-content hidden" id="TransportItem">
-                <div class="equip-titre2">
-                    <div class="container">
-                        <div class="col-8">
-                            <p class="equip-text">Choississez votre pourcentage (de 0 à 100%) en fonction de vos préférences et de vos envies</p>
-                        </div>
-                    </div>
-                </div>
                 <div class="equip-item">
                     <div class="container">
                         <div class="col-2 equip-img-vert">
-                            <img src="img/forest.jpg" class="equip-img height3" id="">
+                            <h6>Transport en Commun</h6>
+                            <img src="img/tram.jpg" class="equip-img height3" id="imgCommun">
+                            <input onchange="miseAJourForet()" type="text" value="25" class="equip-input black" id="Commun">
                         </div>
                         <div class="col-2 equip-img-vert">
-                            <img src="img/montagne.jpg" class="equip-img height3" id="">
+                            <h6>Le Vélo</h6>
+                            <img src="img/velo.jpg" class="equip-img height3" id="imgVelo">
+                            <input onchange="miseAJourMontagne()" type="text" value="25" class="equip-input black" id="Velo">
                         </div>
                         <div class="col-2 equip-img-vert">
-                            <img src="img/ocean.jpg" class="equip-img height3" id="">
+                            <h6>La marche à pied</h6>
+                            <img src="img/randonneur.jpg" class="equip-img height3" id="imgMarcheur">
+                            <input onchange="miseAJourMer()" type="text" value="25" class="equip-input black" id="Marcheur">
                         </div>
                         <div class="col-2 equip-img-vert">
-                            <img src="img/ville.jpg" class="equip-img height3" id="">
+                            <h6>La voiture</h6>
+                            <img src="img/voiture.jpg" class="equip-img height3" id="imgVoiture">
+                            <input onchange="miseAJourVille()" type="text" value="25" class="equip-input black" id="Voiture">
                         </div>
                     </div>
                 </div>
-                <div class="equip-barre-selection">
+                <div class="equip-titre2">
                     <div class="container">
-                        <div class="col-2 equip-selector">
-                            <input onchange="miseAJourForet()" type="text" value="25" class="equip-input black" id="">
-                        </div>
-                        <div class="col-2 equip-selector">
-                            <input onchange="miseAJourMontagne()" type="text" value="25" class="equip-input black" id="">
-                        </div>
-                        <div class="col-2 equip-selector">
-                            <input onchange="miseAJourMer()" type="text" value="25" class="equip-input black" id="">
-                        </div>
-                        <div class="col-2 equip-selector">
-                            <input onchange="miseAJourVille()" type="text" value="25" class="equip-input black" id="">
+                        <div class="col-8">
+                            <p class="equip-text">Pour le transport, c'est plutôt à vitesse humaine ou pas de temps à perdre? Quelles préférences avez vous?</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="equip-content hidden" id="GastronomieItem">
-                <div class="equip-titre2">
-                    <div class="container">
-                        <div class="col-8">
-                            <p class="equip-text">Choississez votre pourcentage (de 0 à 100%) en fonction de vos préférences et de vos envies</p>
-                        </div>
-                    </div>
-                </div>
                 <div class="equip-item">
                     <div class="container">
                         <div class="col-2 equip-img-vert">
-                            <img src="img/forest.jpg" class="equip-img height3" id="">
+                            <h6>La gastronomie</h6>
+                            <img src="img/gastronomie.jpg" class="equip-img height3" id="imgGastro">
+                            <input onchange="miseAJourForet()" type="text" value="25" class="equip-input black" id="Gastro">
                         </div>
                         <div class="col-2 equip-img-vert">
-                            <img src="img/montagne.jpg" class="equip-img height3" id="">
+                            <h6>Le fast-food</h6>
+                            <img src="img/fast-food.jpg" class="equip-img height3" id="imgFastFood">
+                            <input onchange="miseAJourMontagne()" type="text" value="25" class="equip-input black" id="FastFood">
                         </div>
                         <div class="col-2 equip-img-vert">
-                            <img src="img/ocean.jpg" class="equip-img height3" id="">
+                            <h6>Le local</h6>
+                            <img src="img/marche.jpg" class="equip-img height3" id="imgMarche">
+                            <input onchange="miseAJourMer()" type="text" value="25" class="equip-input black" id="Marche">
                         </div>
                         <div class="col-2 equip-img-vert">
-                            <img src="img/ville.jpg" class="equip-img height3" id="">
+                            <h6>Le traditionnel</h6>
+                            <img src="img/traditionnelle.jpg" class="equip-img height3" id="imgTradition">
+                            <input onchange="miseAJourVille()" type="text" value="25" class="equip-input black" id="Tradition">
                         </div>
                     </div>
                 </div>
-                <div class="equip-barre-selection">
+                <div class="equip-titre2">
                     <div class="container">
-                        <div class="col-2 equip-selector">
-                            <input onchange="miseAJourForet()" type="text" value="25" class="equip-input black" id="">
-                        </div>
-                        <div class="col-2 equip-selector">
-                            <input onchange="miseAJourMontagne()" type="text" value="25" class="equip-input black" id="">
-                        </div>
-                        <div class="col-2 equip-selector">
-                            <input onchange="miseAJourMer()" type="text" value="25" class="equip-input black" id="">
-                        </div>
-                        <div class="col-2 equip-selector">
-                            <input onchange="miseAJourVille()" type="text" value="25" class="equip-input black" id="">
+                        <div class="col-8">
+                            <p class="equip-text">Point de vue nourriture : difficile ou pas? Gastro ou sur le pouce? A vous de choisir</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="equip-content hidden" id="CultureItem">
-                <div class="equip-titre2">
-                    <div class="container">
-                        <div class="col-8">
-                            <p class="equip-text">Choississez votre pourcentage (de 0 à 100%) en fonction de vos préférences et de vos envies</p>
-                        </div>
-                    </div>
-                </div>
                 <div class="equip-item">
                     <div class="container">
                         <div class="col-2 equip-img-vert">
-                            <img src="img/forest.jpg" class="equip-img height3" id="">
+                            <h6>Les musées</h6>
+                            <img src="img/musee.jpg" class="equip-img height3" id="imgMusee">
+                            <input onchange="miseAJourForet()" type="text" value="25" class="equip-input black" id="Musee">
                         </div>
                         <div class="col-2 equip-img-vert">
-                            <img src="img/montagne.jpg" class="equip-img height3" id="">
+                            <h6>Les rues atypiques</h6>
+                            <img src="img/ruelle-insolite.jpg" class="equip-img height3" id="imgStreet">
+                            <input onchange="miseAJourMontagne()" type="text" value="25" class="equip-input black" id="Street">
                         </div>
                         <div class="col-2 equip-img-vert">
-                            <img src="img/ocean.jpg" class="equip-img height3" id="">
+                            <h6>Le street Art</h6>
+                            <img src="img/street-art.jpg" class="equip-img height3" id="imgInsolite">
+                            <input onchange="miseAJourMer()" type="text" value="25" class="equip-input black" id="Insolite">
                         </div>
                         <div class="col-2 equip-img-vert">
-                            <img src="img/ville.jpg" class="equip-img height3" id="">
+                            <h6>L'histoire</h6>
+                            <img src="img/batiment.jpg" class="equip-img height3" id="imgVieilleVille">
+                            <input onchange="miseAJourVille()" type="text" value="25" class="equip-input black" id="VieilleVille">
                         </div>
                     </div>
                 </div>
-                <div class="equip-barre-selection">
+                <div class="equip-titre2">
                     <div class="container">
-                        <div class="col-2 equip-selector">
-                            <input onchange="miseAJourForet()" type="text" value="25" class="equip-input black" id="">
-                        </div>
-                        <div class="col-2 equip-selector">
-                            <input onchange="miseAJourMontagne()" type="text" value="25" class="equip-input black" id="">
-                        </div>
-                        <div class="col-2 equip-selector">
-                            <input onchange="miseAJourMer()" type="text" value="25" class="equip-input black" id="">
-                        </div>
-                        <div class="col-2 equip-selector">
-                            <input onchange="miseAJourVille()" type="text" value="25" class="equip-input black" id="">
+                        <div class="col-8">
+                            <p class="equip-text">Et envie de culture, plutôt Insolite ou musée? Réglez votre choix</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="equip-content hidden" id="ActivitesItem">
-                <div class="equip-titre2">
-                    <div class="container">
-                        <div class="col-8">
-                            <p class="equip-text">Choississez votre pourcentage (de 0 à 100%) en fonction de vos préférences et de vos envies</p>
-                        </div>
-                    </div>
-                </div>
                 <div class="equip-item">
                     <div class="container">
                         <div class="col-2 equip-img-vert">
-                            <img src="img/forest.jpg" class="equip-img height3" id="">
+                            <h6>Les sensations fortes</h6>
+                            <img src="img/hydrospeed.jpg" class="equip-img height3" id="imgSensation">
+                            <input onchange="miseAJourForet()" type="text" value="25" class="equip-input black" id="Sensation">
                         </div>
                         <div class="col-2 equip-img-vert">
-                            <img src="img/montagne.jpg" class="equip-img height3" id="">
+                            <h6>Repos et Farniente</h6>
+                            <img src="img/farniente.jpg" class="equip-img height3" id="imgFarniente">
+                            <input onchange="miseAJourMontagne()" type="text" value="25" class="equip-input black" id="Farniente">
                         </div>
                         <div class="col-2 equip-img-vert">
-                            <img src="img/ocean.jpg" class="equip-img height3" id="">
+                            <h6>La faune et la flore</h6>
+                            <img src="img/faune.jpg" class="equip-img height3" id="imgFaune">
+                            <input onchange="miseAJourMer()" type="text" value="25" class="equip-input black" id="Faune">
                         </div>
                         <div class="col-2 equip-img-vert">
-                            <img src="img/ville.jpg" class="equip-img height3" id="">
+                            <h6>L'activité physique</h6>
+                            <img src="img/activite.jpg" class="equip-img height3" id="imgSport">
+                            <input onchange="miseAJourVille()" type="text" value="25" class="equip-input black" id="Sport">
                         </div>
                     </div>
                 </div>
-                <div class="equip-barre-selection">
+                <div class="equip-titre2">
                     <div class="container">
-                        <div class="col-2 equip-selector">
-                            <input onchange="miseAJourForet()" type="text" value="25" class="equip-input black" id="foret">
-                        </div>
-                        <div class="col-2 equip-selector">
-                            <input onchange="miseAJourMontagne()" type="text" value="25" class="equip-input black" id="montagne">
-                        </div>
-                        <div class="col-2 equip-selector">
-                            <input onchange="miseAJourMer()" type="text" value="25" class="equip-input black" id="mer">
-                        </div>
-                        <div class="col-2 equip-selector">
-                            <input onchange="miseAJourVille()" type="text" value="25" class="equip-input black" id="ville">
+                        <div class="col-8">
+                            <p class="equip-text">Quelles activités préférez vous?  Réglez votre curseur (de 0 à 100)</p>
                         </div>
                     </div>
                 </div>
@@ -262,5 +225,6 @@
         </footer>
         <script src="js/onglets.js"></script>
         <script src="js/paysage.js"></script>
+        <script src="js/printpdf.js"></script>
     </body>
 </html>
