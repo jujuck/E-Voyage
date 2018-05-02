@@ -2,7 +2,6 @@
 const onglet = (feuillet, index) => {
     let onglets = document.getElementsByClassName("equip-menuItem")
     for (let onglet of onglets) {
-        console.log(onglet)
        if (onglet.classList.contains("active")) {
            onglet.classList.remove("active")
            }

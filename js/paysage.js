@@ -2,11 +2,14 @@ var foret = document.getElementById("foret")
 ,   montagne = document.getElementById("montagne")
 ,   mer = document.getElementById("mer")
 ,   ville = document.getElementById("ville")
-,   imgforet = document.getElementById("imgForet")
-,   imgmontagne = document.getElementById("imgMontagne")
-,   imgmer =document.getElementById("imgMer")
-,   imgville = document.getElementById("imgVille")
-  
+,   imgForet = document.getElementById("imgForet")
+,   imgMontagne = document.getElementById("imgMontagne")
+,   imgMer =document.getElementById("imgMer")
+,   imgVille = document.getElementById("imgVille")
+,   foretValue = ""
+,   montagneValue = ""
+,   merValue = ""
+,   villeValue = ""
 
 const affichagePaysage = (index, values) => {
     index.value = values.toFixed(0);
@@ -34,11 +37,27 @@ const tailleImage = (index, values) => {
     index.classList.add('equip-img')
 }
 
+const initValeur = () => {
+    foretValue = parseInt(foret.value);
+    montagneValue = parseInt(montagne.value);
+    merValue = parseInt(mer.value);
+    villeValue = parseInt(ville.value); 
+}
+
+const initAffichage = () => {
+    affichagePaysage(foret, foretValue)
+    affichagePaysage(montagne, montagneValue)
+    affichagePaysage(mer, merValue)
+    affichagePaysage(ville, villeValue)
+    
+    tailleImage(imgForet, foretValue)
+    tailleImage(imgMontagne, montagneValue)
+    tailleImage(imgMer, merValue)
+    tailleImage(imgVille, villeValue)
+}
+
 const miseAJourForet = () => {
-    let foretValue = parseInt(foret.value);
-    let montagneValue = parseInt(montagne.value);
-    let merValue = parseInt(mer.value);
-    let villeValue = parseInt(ville.value);       
+    initValeur();   
             
     let pourcentage = montagneValue + merValue + villeValue;
     let taux = 100 / pourcentage;
@@ -46,23 +65,13 @@ const miseAJourForet = () => {
     merValue = (taux * merValue) * (100 - foretValue) / 100;
     villeValue = (taux * villeValue) * (100 - foretValue) / 100;
     
-    affichagePaysage(foret, foretValue)
-    affichagePaysage(montagne, montagneValue)
-    affichagePaysage(mer, merValue)
-    affichagePaysage(ville, villeValue)
-    
-    tailleImage(imgForet, foretValue)
-    tailleImage(imgMontagne, montagneValue)
-    tailleImage(imgMer, merValue)
-    tailleImage(imgVille, villeValue)
+    initAffichage();
+
     
 }
 
 const miseAJourMer = () => {
-    let foretValue = parseInt(foret.value);
-    let montagneValue = parseInt(montagne.value);
-    let merValue = parseInt(mer.value);
-    let villeValue = parseInt(ville.value);       
+    initValeur(); 
             
     let pourcentage = montagneValue + foretValue + villeValue;
     let taux = 100 / pourcentage;
@@ -70,22 +79,11 @@ const miseAJourMer = () => {
     foretValue = (taux * foretValue) * (100 - merValue) / 100;
     villeValue = (taux * villeValue) * (100 - merValue) / 100;
     
-    affichagePaysage(foret, foretValue)
-    affichagePaysage(montagne, montagneValue)
-    affichagePaysage(mer, merValue)
-    affichagePaysage(ville, villeValue)
-    
-    tailleImage(imgForet, foretValue)
-    tailleImage(imgMontagne, montagneValue)
-    tailleImage(imgMer, merValue)
-    tailleImage(imgVille, villeValue)
+    initAffichage();
 }
 
 const miseAJourMontagne = () => {
-    let foretValue = parseInt(foret.value);
-    let montagneValue = parseInt(montagne.value);
-    let merValue = parseInt(mer.value);
-    let villeValue = parseInt(ville.value);       
+    initValeur();
             
     let pourcentage = foretValue + merValue + villeValue;
     let taux = 100 / pourcentage;
@@ -93,22 +91,11 @@ const miseAJourMontagne = () => {
     merValue = (taux * merValue) * (100 - montagneValue) / 100;
     villeValue = (taux * villeValue) * (100 - montagneValue) / 100;
     
-    affichagePaysage(foret, foretValue)
-    affichagePaysage(montagne, montagneValue)
-    affichagePaysage(mer, merValue)
-    affichagePaysage(ville, villeValue)
-    
-    tailleImage(imgForet, foretValue)
-    tailleImage(imgMontagne, montagneValue)
-    tailleImage(imgMer, merValue)
-    tailleImage(imgVille, villeValue)
+    initAffichage()
 }
 
 const miseAJourVille = () => {
-    let foretValue = parseInt(foret.value);
-    let montagneValue = parseInt(montagne.value);
-    let merValue = parseInt(mer.value);
-    let villeValue = parseInt(ville.value);       
+    initValeur();     
             
     let pourcentage = montagneValue + merValue + foretValue;
     let taux = 100 / pourcentage;
@@ -116,13 +103,5 @@ const miseAJourVille = () => {
     merValue = (taux * merValue) * (100 - villeValue) / 100;
     foretValue = (taux * foretValue) * (100 - villeValue) / 100;
     
-    affichagePaysage(foret, foretValue)
-    affichagePaysage(montagne, montagneValue)
-    affichagePaysage(mer, merValue)
-    affichagePaysage(ville, villeValue)
-    
-    tailleImage(imgForet, foretValue)
-    tailleImage(imgMontagne, montagneValue)
-    tailleImage(imgMer, merValue)
-    tailleImage(imgVille, villeValue)
+    initAffichage();
 }
