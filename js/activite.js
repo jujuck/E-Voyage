@@ -83,7 +83,7 @@ const miseAJourFarniente = () => {
 const miseAJourFaune = () => {
     initValeurAct();
             
-    let pourcentage = sensationValue + farnienteValue + villeValue;
+    let pourcentage = sensationValue + farnienteValue + sportValue;
     let taux = 100 / pourcentage;
     sensationValue = (taux * sensationValue) * (100 - fauneValue) /100;
     farnienteValue = (taux * farnienteValue) * (100 - fauneValue) / 100;

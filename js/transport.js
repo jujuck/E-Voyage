@@ -13,7 +13,7 @@ var commun = document.getElementById("commun")
 
 const affichageTransport = (index, values) => {
     index.value = values.toFixed(0);
-    
+    console.log(index.value)
     /*Couleur du trait de l'input*/
     let classCouleur;
     (values >= 60 )? classCouleur = "red"
@@ -47,8 +47,8 @@ const initValeurTrans = () => {
 const initAffichageTrans = () => {
     affichageTransport(commun, communValue)
     affichageTransport(velo, veloValue)
-    affichageTransport(mer, merValue)
-    affichageTransport(ville, villeValue)
+    affichageTransport(marcheur, marcheurValue)
+    affichageTransport(voiture, voitureValue)
     
     tailleImageTrans(imgCommun, communValue)
     tailleImageTrans(imgVelo, veloValue)
@@ -65,9 +65,7 @@ const miseAJourCommun = () => {
     marcheurValue = (taux * marcheurValue) * (100 - communValue) / 100;
     voitureValue = (taux * voitureValue) * (100 - communValue) / 100;
     
-    initAffichageTrans();
-
-    
+    initAffichageTrans();  
 }
 
 const miseAJourVelo = () => {

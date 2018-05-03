@@ -39,6 +39,10 @@
     display: block;
         
 }
+
+.img-item {
+    height: 250px;
+}
 /*====Class de hauteur pour les images ====*/
 .height1 {
     height: 150px;
@@ -75,7 +79,7 @@
     width: 50px;
     border: 2px solid;
     text-align: center;
-    margin: 25px;
+    
 }
 
 /*====Class Couleur ===*/
@@ -95,7 +99,7 @@
     color: blue;
 }
 
-.green {
+.vert {
     border-color: green;
 }
 
