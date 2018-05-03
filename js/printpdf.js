@@ -1,28 +1,28 @@
 //Définition des variables
-let PaysForet = document.getElementById("foret").value;
-let PaysMontagne = document.getElementById("montagne").value
-let PaysMer = document.getElementById("mer").value
-let PaysVille = document.getElementById("ville").value
+let PaysForet = document.getElementById("foret");
+let PaysMontagne = document.getElementById("montagne")
+let PaysMer = document.getElementById("mer")
+let PaysVille = document.getElementById("ville")
 
-let TransportCommun = document.getElementById("commun").value
-let TransportVoiture = document.getElementById("voiture").value
-let TransportVelo = document.getElementById("velo").value
-let TransportMarche = document.getElementById("marcheur").value
+let TransportCommun = document.getElementById("commun")
+let TransportVoiture = document.getElementById("voiture")
+let TransportVelo = document.getElementById("velo")
+let TransportMarche = document.getElementById("marcheur")
 
-let AlimentationGastro = document.getElementById("gastro").value
-let AlimentationFastFood = document.getElementById("fastfood").value
-let AlimentationMarche = document.getElementById("marche").value
-let Alimentationtradition = document.getElementById("tradition").value
+let AlimentationGastro = document.getElementById("gastro")
+let AlimentationFastFood = document.getElementById("fastfood")
+let AlimentationMarche = document.getElementById("marche")
+let Alimentationtradition = document.getElementById("tradition")
 
-let CultureMusee = document.getElementById("musee").value
-let CultureStreet = document.getElementById("street").value
-let CultureInsolite = document.getElementById("insolite").value
-let CultureBatiment = document.getElementById("batiment").value
+let CultureMusee = document.getElementById("musee")
+let CultureStreet = document.getElementById("street")
+let CultureInsolite = document.getElementById("insolite")
+let CultureBatiment = document.getElementById("batiment")
 
-let ActiviteSensation = document.getElementById("sensation").value
-let ActiviteFarniente = document.getElementById("farniente").value
-let ActiviteFaune = document.getElementById("faune").value
-let ActiviteSport = document.getElementById("sport").value
+let ActiviteSensation = document.getElementById("sensation")
+let ActiviteFarniente = document.getElementById("farniente")
+let ActiviteFaune = document.getElementById("faune")
+let ActiviteSport = document.getElementById("sport")
 
 
 //Mise en place de la fonction du pdf
@@ -39,20 +39,21 @@ function createPDF() {
     
     doc.setFont("Arial")
     doc.setFontSize("45")
-    doc.text(`Vos lieu privilégié de vacances`, 5, 1)
+    doc.text(`Vos lieux privilégiés de vacances`, 5, 1)
     
     
     doc.setFont("Helvetica")
     doc.setFontSize("20")
-    doc.text(`Vous privilégiez l'ambiance forestière à ${PaysForet}%, le soleil de la cote à ${PaysMer}%, le dynamise de la ville à ${PaysVille}% et l'air pur de l'altitude à ${PaysMontagne}%`, 1, 2)
+    doc.text(`Vous privilégiez l'ambiance forestière à ${PaysForet.value}%, le soleil de la cote à ${PaysMer.value}%, le dynamise de la ville à ${PaysVille.value}% et l'air pur de l'altitude à ${PaysMontagne.value}%`, 1, 2)
     
     doc.setFont("Arial")
     doc.setFontSize("45")
-    doc.text(`Vos mode de transport favori en vacances`, 4, 5)
+    doc.text(`Vos modes de transport favoris en vacances`, 4, 5)
     
     doc.setFont("Helvetica")
     doc.setFontSize("20")
-    doc.text(`Vous aimez la découverte avec les transports en commun à ${TransportCommun}%, le déplacement léger à vélo à ${TransportVelo}%, la vitesse humaine de la marche à ${TransportMarche}%`, 1, 6)
+    doc.text(`Vous aimez la découverte avec les transports en commun à ${TransportCommun.value}%, le déplacement léger à vélo à ${TransportVelo.value}%, la vitesse humaine de la marche à ${TransportMarche.value}%`, 1, 6)
+    doc.text(`et le confort de la voiture ${TransportVoiture.value}%`,1 , 7)
     
     doc.setFont("Arial")
     doc.setFontSize("45")
@@ -60,7 +61,7 @@ function createPDF() {
     
     doc.setFont("Helvetica")
     doc.setFontSize("20")
-    doc.text(`Fastfood à ${AlimentationFastFood}%, Gastronomique à ${AlimentationGastro}, sur le pouce, sur le marché et local à ${AlimentationMarche}% et la découverte des plats traditionnels à ${Alimentationtradition}%`,1 , 10)
+    doc.text(`Fastfood à ${AlimentationFastFood.value}%, Gastronomique à ${AlimentationGastro.value}%, sur le pouce, sur le marché et local à ${AlimentationMarche.value}% et la découverte des plats traditionnels à ${Alimentationtradition.value}%`,1 , 10)
     
     doc.setFont("Arial")
     doc.setFontSize("45")
@@ -68,7 +69,7 @@ function createPDF() {
     
     doc.setFont("Helvetica")
     doc.setFontSize("20")
-    doc.text(`Pour les musées et galleries, ${CultureMusee}% , les vieilles pierres et l'histoire à ${CultureBatiment}%, le street art et l'architecture moderne à ${CultureInsolite}% et les ruelles intimistes à ${CultureInsolite}%`,1, 14)
+    doc.text(`Pour les musées et galleries, ${CultureMusee.value}% , les vieilles pierres et l'histoire à ${CultureBatiment.value}%, le street art et l'architecture moderne à ${CultureBatiment.value}% et les ruelles intimistes à ${CultureInsolite.value}%`,1, 14)
     
     doc.setFont("Arial")
     doc.setFontSize("45")
@@ -76,8 +77,8 @@ function createPDF() {
     
     doc.setFont("Helvetica")
     doc.setFontSize("20")
-    doc.text(`Les sensations fortes et l'adrénaline à ${ActiviteSensation}%, l'activités physiques, les ballades et les randonnées à ${ActiviteSport}%, l'observation, la faune`,1 ,17)
-    doc.text(`et la flore à ${ActiviteFaune} et le repos et le farniente à ${ActiviteFarniente}%`,1 , 18)
+    doc.text(`Les sensations fortes et l'adrénaline à ${ActiviteSensation.value}%, l'activités physiques, les ballades et les randonnées à ${ActiviteSport.value}%, l'observation, la faune`,1 ,17)
+    doc.text(`et la flore à ${ActiviteFaune.value}% et le repos et le farniente à ${ActiviteFarniente.value}%`,1 , 18)
     
     
     doc.setFontSize("24")
