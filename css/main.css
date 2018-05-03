@@ -9,9 +9,17 @@ h1 {
     font-weight: 1500;
 }
 
+h2 {
+    font-family: "Fira Sans", "Arial";
+    font-size: 32px;
+    font-weight: 100;
+    margin-bottom: 15px;
+}
+
 h3 {
     font-family: "Fira Sans", "Arial";
     font-size: 24px;
+    margin-bottom: 10px;
 }
 
 h4 {
@@ -19,8 +27,9 @@ h4 {
     font-size: 12px;
 }
 
-.hidden {
-    display: none;
+h6 {
+    font-family: 'Montserrat', serif;
+    font-size : 12px;
 }
 
 a {
@@ -28,15 +37,15 @@ a {
     color: inherit;
 }
 
-h6 {
-    font-family: 'Montserrat', serif;
-    font-size : 12px;
-}
-
 p {
     font-family: 'Montserra', 'Arial';
     font-size: 18px;
 }
+
+.hidden {
+    display: none;
+}
+
 
 /*Espace Header Accueil */
 .accueil-header {
@@ -92,6 +101,12 @@ p {
 
 
 /*=====Footer======*/
+footer {
+    position: fixed;
+    bottom: 10px;
+    right: 15px;
+}
+
 .accueil-footer-text {
     text-align: right;
     margin-right: 25px;

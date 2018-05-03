@@ -42,6 +42,10 @@
 
 .img-item {
     height: 250px;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s; 
 }
 /*====Class de hauteur pour les images ====*/
 .height1 {
@@ -103,3 +107,29 @@
     border-color: green;
 }
 
+/*===== Centrage du bouton PrintPDF =======*/
+.button-container {
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+.button {
+    width: 150px;
+    height: 25px;
+    box-shadow: 4px 4px 8px black;
+    border-radius: 8px;
+    margin: 25px;
+    padding: 5px;
+    text-align: center;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s; 
+}
+
+.button:hover {
+    color: white;
+    background-color: black;
+    text-decoration: underline;
+}

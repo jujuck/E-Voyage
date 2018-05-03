@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <Title>Explorez le monde avec NELLO</Title>
+        <Title>Explorez le monde avec WELLO</Title>
         
         <!--Feuille de style-->
         <link href="css/main.css" rel="stylesheet">
@@ -24,16 +24,93 @@
                 <div class="accueil-mort col-3">
                 </div>
                 <div class="accueil-menu col-3">
-                    <h3 class="accueil-btn btn1"><a href="index.html">HOME</a></h3>
-                    <h3 class="accueil-btn btn2"><a href="aboutUs.html">ABOUT US</a></h3>
+                    <h3 class="accueil-btn btn1"><a href="index.html">ACCUEIL</a></h3>
+                    <h3 class="accueil-btn btn2"><a href="aboutUs.html">A PROPOS</a></h3>
                     <h3 class="accueil-btn btn3"><a href="equipement.html">EQUIPEMENT</a></h3>
                 </div>
             </div>
         </header>
-        <section class="accueil-wrapper">
-           
+        <!-- About Us -->
+        <section id="About" class="Section">
+            <div class="container">
+                <div class="col-8">
+                    <!--About Us Title & Description -->
+                    <div class="section-title">
+                        <h2>A propos de Nous</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rhoncus ultricies nibh, vitae sodales purus. Aenean volutpat ullamcorper cursus. Duis tristique sit amet augue ac vestibulum.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="choose-us-wraper">
+                <div class="container">
+                    <div class="col-4">
+                        <div class="about-us">
+                            <img class="img-aboutUs" src="img/voyage.jpg" alt="voyage">
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <!-- Why choose Us description -->
+                        <div class="why-choose-us-des">
+                            <!-- choose us item 1 -->
+                            <div class="choose-us-item">
+                                <h3>L'expérience du voyage</h3>
+                                <p>Lipsum Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque lacus dui, interdum sit amet varius a, cursus sit amet sapien. Donec eu placerat nisi.</p>
+                                <img class="aboutUsImg" src="img/experience.png" alt="experience">
+                            </div>
+                            <!-- choose us item 2 -->
+                            <div class="choose-us-item">
+                                <h3>Le choix de la découverte</h3>
+                                <p>Diso Lipsum Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque lacus dui, interdum sit amet varius a, cursus sit amet sapien. Donec eu placerat nisi.</p>
+                                <img class="iaboutUsImg" src="img/decouverte.jpeg" alt="decouverte">
+                            </div>
+                            <!-- choose us item 3 -->
+                            <div class="choose-us-item">
+                                <h3>L'écoute et l'entraide</h3>
+                                <p>Sed ut perspiciatis Cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.unde omnis iste natus error sit.</p>
+                                <img class="aboutUsImg" src="img/convivialite.png" alt="convivialite">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-        <footer>
+        <!-- Contact Us -->
+        <section class="contact-us Section" id="Contact">
+            <div class="container">
+                <div class="col-8">
+                    <div class="section-title">
+                        <h2>Nous Contactez</h2>
+                        <p>Nulla blandit sem sed neque pretium mattis. Etiam consectetur eleifend felis porttitor porttitor. Phasellus sit amet augue fringilla, fringilla lectus at, tincidunt ante.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-us-form">
+                <form role="form">
+                     <div class="container">
+                        <div class="col-4 cube">
+                            <p class="input-form">
+                            <label>Votre nom</label>
+                            <input type="text" class="form" id="name" placeholder="Name">
+                            </p>
+                            <p class="input-form">
+                            <label>Votre prénom</label>
+                            <input type="text" class="form" id="prenom" placeholder="prenom">
+                            </p>
+                            <p class="input-form">
+                            <label>Votre email</label>
+                            <input type="text" class="form" id="email" placeholder="Email">
+                            </p>
+                       </div>
+                        <div class="col-4">
+                            <p class="input-form">Ecrivez nous vos attentes, vos commentaires ou vos questions ici...</p>
+                            <textarea class="form-control" id="message" rows="25" cols="10" placeholder="Message text...."></textarea>
+                            <button type="button" class="btn btn-default submit-btn form_submit">Envoyer</button>
+                        </div>
+                     </div>
+                </form>
+            </div>
+        </section>
+        <section class="Section">
             <div class ="container">
                 <div class="col-3 accueil-footer-diapo">
                   
@@ -45,6 +122,7 @@
                     <h4 class="accueil-footer-p btn4">Created by J.R</h4>
                 </div>
             </div>
-        </footer>
+            <h6>Photo by Sagar Patil & Loic Espinasse & mauro paillex & Jose Llamas & Luca Bravo  & Yousef Espanioly & Sebastián León Prado on Unsplash</h6>
+        </section>
     </body>
 </html>

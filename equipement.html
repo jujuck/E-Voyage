@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <Title>Explorez le monde avec NELLO</Title>
+        <Title>Explorez le monde avec WELLO</Title>
         
         <!--Feuille de style-->
         <link href="css/main.css" rel="stylesheet">
@@ -15,7 +15,7 @@
         <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet"> <!-- Autres -->
         
         <!--Création PDF -->
-        <script src='https://unpkg.com/jspdf@latest/dist/jspdf.min.js'></script>
+        <script src="https://unpkg.com/jspdf@latest/dist/jspdf.min.js"></script>
 
     </head>
     <body>
@@ -27,8 +27,8 @@
                 <div class="accueil-mort col-3">
                 </div>
                 <div class="accueil-menu col-3">
-                    <h3 class="accueil-btn btn1"><a href="index.html">HOME</a></h3>
-                    <h3 class="accueil-btn btn2"><a href="aboutUs.html">ABOUT US</a></h3>
+                    <h3 class="accueil-btn btn1"><a href="index.html">ACCUEIL</a></h3>
+                    <h3 class="accueil-btn btn2"><a href="aboutUs.html">A PROPOS</a></h3>
                     <h3 class="accueil-btn btn3"><a href="equipement.html">EQUIPEMENT</a></h3>
                 </div>
             </div>
@@ -247,12 +247,18 @@
                         </div>
                     </div>
                 </div>
+                <div class="container">
+                    <div class="col-8 button-container">
+                        <div class="button" onclick="PrintPDF()"><p>Print your receipt</p></div>
+                    </div>
+                </div>
             </div>
         </section>
+        
         <footer>
             <div class ="container">
                 <div class="col-3 accueil-footer-diapo">
-                  
+                    
                 </div>
                 <div class="col-5 accueil-footer-text">
                     <h4 class="accueil-footer-p btn4">Facebook</h4>
@@ -261,7 +267,6 @@
                     <h4 class="accueil-footer-p btn4">Created by J.R</h4>
                 </div>
             </div>
-            <h6>Photo by Sagar Patil & Loic Espinasse & mauro paillex & Jose Llamas  & Jose Llamas on Unsplash</h6>
         </footer>
         <script src="js/onglets.js"></script>
         <script src="js/paysage.js"></script>
