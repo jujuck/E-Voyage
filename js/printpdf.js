@@ -35,23 +35,55 @@ let ActiviteSport = document.getElementById("sport").value
 
 function createPDF() {
    
+    doc.addFont("Arial", "Helvetica")
     
     doc.setFont("Arial")
-    doc.setFontSize("20")
+    doc.setFontSize("45")
+    doc.text(`Vos lieu privilégié de vacances`, 5, 1)
     
-    doc.text(`Vos lieu privilégié de vacances`, 10, 1)
-    doc.text(`Vous privilégiez l'ambiance forestière à ${PaysForet}%, le soleil de la cote à ${PaysMer}%, le dynamise de la ville à ${PaysVille}% et le calme et l'air pur de l'altitude à ${PaysMontagne}%`, 1, 2)
-    doc.text(`Vos mode de transport favori en vacances`, 10, 4)
-    doc.text(`Vous aimez la découverte avec les transports en commun à ${TransportCommun}%, le déplacement léger à vélo à ${TransportVelo}%, la vitesse humaine de la marche à ${TransportMarche}% et la liberté de déplacement de la voiture à ${TransportVoiture}%`, 1, 5)
-    doc.text(`Pour la restauration, c'est :`, 10, 7)
-    doc.text(`Fastfood à ${AlimentationFastFood}%, Gastronomique à ${AlimentationGastro}, sur le pouce, sur le marché et local à ${AlimentationMarche}% et la découverte des plats traditionnels à ${Alimentationtradition}%`, 1, 8)
-    doc.text(`Coté découverte : c'est l'activité culturelle des congés :`, 10, 10)
-    doc.text(`Pour les musées et galleries, ${CultureMusee}% du temps, les vieilles pierres et l'histoire à ${CultureBatiment}%, le street art et l'architecture moderne à ${CultureInsolite} et les petites ruelles intimistes à ${CultureInsolite}%`, 1, 11)
-    doc.text(`Et pour les activités physiques, on y va :`, 10, 13)
-    doc.text(`Les sensations fortes et l'adrénalines à ${ActiviteSensation}%, l'activités physiques, les ballades et les randonnées à ${ActiviteSport}%, l'observation, la faune et la flore à ${ActiviteFaune} et le repose et le farniente à ${ActiviteFarniente}%`, 1, 14)
-    doc.text(`----------------------------------------------------------------------------`, 10, 16)
-    doc.text(`N'hésitez pas à revenir sur notre formulaire pour effectuer des mises à jour`, 5, 18)
-    doc.text('Sans modification, nous traitons votre demande et vous envoyons une proposition', 5, 19)
+    
+    doc.setFont("Helvetica")
+    doc.setFontSize("20")
+    doc.text(`Vous privilégiez l'ambiance forestière à ${PaysForet}%, le soleil de la cote à ${PaysMer}%, le dynamise de la ville à ${PaysVille}% et l'air pur de l'altitude à ${PaysMontagne}%`, 1, 2)
+    
+    doc.setFont("Arial")
+    doc.setFontSize("45")
+    doc.text(`Vos mode de transport favori en vacances`, 4, 5)
+    
+    doc.setFont("Helvetica")
+    doc.setFontSize("20")
+    doc.text(`Vous aimez la découverte avec les transports en commun à ${TransportCommun}%, le déplacement léger à vélo à ${TransportVelo}%, la vitesse humaine de la marche à ${TransportMarche}%`, 1, 6)
+    
+    doc.setFont("Arial")
+    doc.setFontSize("45")
+    doc.text(`Pour la restauration, c'est :`, 6, 9)
+    
+    doc.setFont("Helvetica")
+    doc.setFontSize("20")
+    doc.text(`Fastfood à ${AlimentationFastFood}%, Gastronomique à ${AlimentationGastro}, sur le pouce, sur le marché et local à ${AlimentationMarche}% et la découverte des plats traditionnels à ${Alimentationtradition}%`,1 , 10)
+    
+    doc.setFont("Arial")
+    doc.setFontSize("45")
+    doc.text(`Coté découverte : l'activité culturelle des congés :`, 3, 13)
+    
+    doc.setFont("Helvetica")
+    doc.setFontSize("20")
+    doc.text(`Pour les musées et galleries, ${CultureMusee}% , les vieilles pierres et l'histoire à ${CultureBatiment}%, le street art et l'architecture moderne à ${CultureInsolite}% et les ruelles intimistes à ${CultureInsolite}%`,1, 14)
+    
+    doc.setFont("Arial")
+    doc.setFontSize("45")
+    doc.text(`Et pour les activités physiques, on y va :`, 4, 16)
+    
+    doc.setFont("Helvetica")
+    doc.setFontSize("20")
+    doc.text(`Les sensations fortes et l'adrénaline à ${ActiviteSensation}%, l'activités physiques, les ballades et les randonnées à ${ActiviteSport}%, l'observation, la faune`,1 ,17)
+    doc.text(`et la flore à ${ActiviteFaune} et le repos et le farniente à ${ActiviteFarniente}%`,1 , 18)
+    
+    
+    doc.setFontSize("24")
+    doc.text(`--------------------------------------------------------------------------------`, 5, 20)
+    doc.text(`N'hésitez pas à revenir sur notre formulaire pour effectuer des mises à jour`, 5, 22)
+    doc.text('Sans modification, nous traitons votre demande et vous envoyons une proposition', 5, 23)
 
     
 };
